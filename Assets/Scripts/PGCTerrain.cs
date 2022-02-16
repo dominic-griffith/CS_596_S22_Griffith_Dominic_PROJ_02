@@ -17,19 +17,6 @@ public class PGCTerrain : MonoBehaviour
     public Texture2D heightMapImage;
     public Vector2 offset = new Vector2(2f, 2f);
 
-
-    private void Start()
-    {
-        //InitializeTerrain();
-    }
-
-    private void InitializeTerrain()
-    {
-        terrainData.size = new Vector3(512f, 512f, 512f);
-        terrainData.SetDetailResolution(4, 5);
-        terrainData.heightmapResolution = 5;
-    }
-
     private void OnEnable()                         // Like Awake but for editor
     {
         terrain = this.GetComponent<Terrain>();
