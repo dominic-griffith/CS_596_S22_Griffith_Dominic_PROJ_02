@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/pgc_mesh_02.unity
+    guid: ab9cb7bf6de4f46598c69c0d7136df3c
   m_configObjects: {}
