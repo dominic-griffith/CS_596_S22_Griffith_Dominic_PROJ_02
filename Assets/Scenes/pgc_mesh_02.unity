@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &201798414
+--- !u!1 &1085302940
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,102 +131,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 201798416}
-  - component: {fileID: 201798415}
-  m_Layer: 0
-  m_Name: Demo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &201798415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201798414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f05558e76b041c481a00a7890e5e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomHeightRange: {x: 0, y: 0.1}
-  offset: {x: 2, y: 2}
-  currentOffset: {x: 0, y: 0}
-  turnOnMovement: 0
-  newWorld: {fileID: 0}
-  terrainData: {fileID: 0}
---- !u!4 &201798416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201798414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.24576, y: 540.43066, z: 182.7126}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &834117035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 834117039}
-  - component: {fileID: 834117038}
-  - component: {fileID: 834117037}
-  - component: {fileID: 834117036}
+  - component: {fileID: 1085302943}
+  - component: {fileID: 1085302942}
+  - component: {fileID: 1085302941}
+  - component: {fileID: 1085302944}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &834117036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834117035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d3ee92aa1cd44cebae2429a8038ee0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 834117038}
-  terrainData: {fileID: 15600000, guid: 1c5a4583931994d6c9cf306a323593aa, type: 2}
-  randomHeightRange: {x: 0, y: 0.05}
-  heightMapScale: {x: 1, y: 1, z: 1}
-  hillVariance: 533.3
-  heightMapImage: {fileID: 2800000, guid: 6821d29fbdb0848518e7aab28b9270ae, type: 3}
---- !u!154 &834117037
+--- !u!154 &1085302941
 TerrainCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834117035}
+  m_GameObject: {fileID: 1085302940}
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 1c5a4583931994d6c9cf306a323593aa, type: 2}
   m_EnableTreeColliders: 1
---- !u!218 &834117038
+--- !u!218 &1085302942
 Terrain:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834117035}
+  m_GameObject: {fileID: 1085302940}
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 1c5a4583931994d6c9cf306a323593aa, type: 2}
@@ -243,6 +176,7 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   m_BakeLightProbesForTrees: 1
@@ -253,20 +187,40 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
---- !u!4 &834117039
+--- !u!4 &1085302943
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834117035}
+  m_GameObject: {fileID: 1085302940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085302944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085302940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3ee92aa1cd44cebae2429a8038ee0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1085302942}
+  terrainData: {fileID: 15600000, guid: 1c5a4583931994d6c9cf306a323593aa, type: 2}
+  randomHeightRange: {x: 0, y: 0.1}
+  heightMapScale: {x: 1, y: 1, z: 1}
+  hillVariance: 20
+  heightMapImage: {fileID: 2800000, guid: 6821d29fbdb0848518e7aab28b9270ae, type: 3}
+  offset: {x: 2, y: 2}
 --- !u!1 &1131028884
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +310,7 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -436,10 +391,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408390617}
-  m_LocalRotation: {x: 0.23573051, y: 0.36186948, z: -0.08760553, w: 0.8976675}
-  m_LocalPosition: {x: 4.53, y: 129.4, z: -3.04}
+  m_LocalRotation: {x: 0.32351723, y: 0.3471077, z: -0.1439667, w: 0.86840457}
+  m_LocalPosition: {x: -9.92, y: 491, z: -3.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 29.119, y: 44.138, z: 0.874}
+  m_LocalEulerAnglesHint: {x: 41.44, y: 42.838, z: -1.946}

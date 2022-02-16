@@ -13,6 +13,7 @@ public class PGCTerrainEditor : Editor
     SerializedProperty heightMapScale;
     SerializedProperty heightMapImage;
     SerializedProperty hillVariance;
+    SerializedProperty offset;
 
     bool showRandom = false;
     bool showLoadHeights = false;
@@ -25,6 +26,7 @@ public class PGCTerrainEditor : Editor
         heightMapScale = serializedObject.FindProperty("heightMapScale");
         heightMapImage = serializedObject.FindProperty("heightMapImage");
         hillVariance = serializedObject.FindProperty("hillVariance");
+        offset = serializedObject.FindProperty("offset");
     }
 
     public override void OnInspectorGUI()
@@ -61,7 +63,7 @@ public class PGCTerrainEditor : Editor
             }
         }
 
-        showTrig = EditorGUILayout.Foldout(showLoadHeights, "Trig Function");
+        showTrig = EditorGUILayout.Foldout(showTrig, "Trig Function");
 
         if (showTrig)
         {
@@ -75,13 +77,14 @@ public class PGCTerrainEditor : Editor
         }
 
 
-        showPerlin = EditorGUILayout.Foldout(showLoadHeights, "Perlin Noise");
+        showPerlin = EditorGUILayout.Foldout(showPerlin, "Perlin Noise");
 
         if (showPerlin)
         {
             EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
             GUILayout.Label("Perlin Noise", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(hillVariance);
+            EditorGUILayout.PropertyField(offset);
             if (GUILayout.Button("Perlin Noise"))
             {
                 terrain.PerlinNoise();
